@@ -1,0 +1,5 @@
+C:\Users\Administrator\Desktop\Michal_Stefaniuk_Projekt6\CoreApplication\CoreApplication\bin\Debug\CoreApplication.exe
+C:\Users\Administrator\Desktop\Michal_Stefaniuk_Projekt6\CoreApplication\CoreApplication\bin\Debug\CoreApplication.pdb
+C:\Users\Administrator\Desktop\Michal_Stefaniuk_Projekt6\CoreApplication\CoreApplication\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\Michal_Stefaniuk_Projekt6\CoreApplication\CoreApplication\obj\Debug\CoreApplication.exe
+C:\Users\Administrator\Desktop\Michal_Stefaniuk_Projekt6\CoreApplication\CoreApplication\obj\Debug\CoreApplication.pdb
