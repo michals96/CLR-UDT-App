@@ -11,10 +11,10 @@ public struct Book : INullable
     public string author;
     public string title;
     public int yearOfPublication;
+
     public override string ToString()
     {
-        // Replace the following code with your code
-        return "";
+        return title + "by " + author +" published " + yearOfPublication;
     }
 
     public bool IsNull
@@ -42,6 +42,40 @@ public struct Book : INullable
         yearOfPublication = _year;
         m_Null = false;
     }
+
+    public string Author
+    {
+        get { return author; }
+        set { author = value; }
+    }
+
+    public string Title
+    {
+        get { return title; }
+        set { title = value; }
+    }
+
+    public int Year
+    {
+        get { return yearOfPublication; }
+        set { yearOfPublication = value; }
+    }
+
+    public string getAuthor()
+    {
+        return author;
+    }
+
+    public string getTitle()
+    {
+        return title;
+    }
+
+    public int getYear()
+    {
+        return yearOfPublication;
+    }
+
     public static Book Parse(SqlString s)
     {
         if (s.IsNull)
