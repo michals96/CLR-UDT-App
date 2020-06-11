@@ -5,14 +5,15 @@
 use projectdb
 
 -- RECTANGLES --
---Utworzenie potrzebnych tabel, przy u¿yciu zdefiniowanych typów danych
---create table Rectangles ( shape dbo.Rectangle);
-
--- Usuwanie tabeli 
+--create table Rectangles (shape dbo.Rectangle);
 --drop table Rectangles
 
 -- SQUARE --
-create table Squares ( shape dbo.Square)
+--create table Squares (shape dbo.Square)
+--drop table Squares
+
+-- CIRCLE --
+create table Circles (shape dbo.Circle)
 
 
 
