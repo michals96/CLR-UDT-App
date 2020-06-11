@@ -82,8 +82,9 @@ namespace CoreApplication
                 {
                     connect.Close();
                 }
-
-                //Console.ReadKey(); 
+                Console.WriteLine("Press any key to continue ...");
+                Console.ReadKey();
+                Console.Clear();
             }
         }
     }
