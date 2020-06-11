@@ -5,7 +5,7 @@ create database projectdb
 use projectdb
 
 --Utworzenie potrzebnych tabel, przy u¿yciu zdefiniowanych typów danych
-create table Books (BookField dbo.Book);
+create table Rectangles ( shape dbo.Rectangle);
 
 
 
