@@ -35,6 +35,13 @@ public struct Book : INullable
         }
     }
 
+    public Book(string _author, string _title, int _year)
+    {
+        author = _author;
+        title = _title;
+        yearOfPublication = _year;
+        m_Null = false;
+    }
     public static Book Parse(SqlString s)
     {
         if (s.IsNull)
@@ -43,9 +50,6 @@ public struct Book : INullable
         // Put your code here
         return u;
     }
-
-    // This is a place-holder field member
-    public int var1;
     // Private member
     private bool m_Null;
 }
