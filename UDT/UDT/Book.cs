@@ -42,7 +42,13 @@ public struct Book : INullable
         yearOfPublication = _year;
         m_Null = false;
     }
-
+    public Book(bool val)
+    {
+        this.author = "";
+        this.title = "";
+        this.yearOfPublication = 0;
+        this.m_Null = true;
+    }
     public string Author
     {
         get { return author; }
@@ -78,11 +84,24 @@ public struct Book : INullable
 
     public static Book Parse(SqlString s)
     {
-        if (s.IsNull)
-            return Null;
-        Book u = new Book();
+        //if (s.IsNull)
+            //return Null;
+        //Book u = new Book();
         // Put your code here
-        return u;
+        //return u;
+        String sqlquery = s.Value;
+
+        if (s.IsNull || sqlquery.Trim() == "")
+        {
+            return Null;
+        }
+
+        string astr = sqlquery.Substring(0, sqlquery.IndexOf('+'));
+        string tstr = sqlquery.Substring(sqlquery.IndexOf('+') + 1,
+                        sqlquery.Length - astr.Length - 2);
+        int y = 0;
+
+        return new Book(astr, tstr, y);
     }
     // Private member
     private bool m_Null;
