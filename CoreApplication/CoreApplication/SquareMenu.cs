@@ -48,9 +48,8 @@ namespace CoreApplication
             if (opt == "3")
             {
                 Console.Clear();
-                Console.WriteLine("1 - Search by width");
-                Console.WriteLine("2 - Search by height");
-                Console.WriteLine("3 - Search by field");
+                Console.WriteLine("1 - Search by size");
+                Console.WriteLine("2 - Search by field");
                 string search_option = Console.ReadLine();
                 Console.Clear();
                 Console.WriteLine("1 - Greater values >");
@@ -62,18 +61,14 @@ namespace CoreApplication
                 string val = Console.ReadLine();
                 Console.Clear();
                 Console.WriteLine("-- RECTANGLES LIST --");
-                Console.WriteLine("Height\tWidth\tField");
-                string query = "SELECT shape.Height as H, shape.Width as W, shape.Field as F from Rectangles";
+                Console.WriteLine("Size\tField");
+                string query = "SELECT shape.Size as S, shape.Field as F from Squares";
 
                 if (search_option == "1")
                 {
-                    query += " where shape.Width ";
+                    query += " where shape.Size ";
                 }
                 if (search_option == "2")
-                {
-                    query += " where shape.Height ";
-                }
-                if (search_option == "3")
                 {
                     query += " where shape.Field ";
                 }
@@ -94,9 +89,8 @@ namespace CoreApplication
                 SqlDataReader getData = execute.ExecuteReader();
                 while (getData.Read())
                 {
-                    Console.WriteLine("{0}\t{1}\t{2}",
-                        getData["H"],
-                        getData["W"],
+                    Console.WriteLine("{0}\t{1}",
+                        getData["S"],
                         getData["F"]);
                 }
                 Console.WriteLine("\n");
