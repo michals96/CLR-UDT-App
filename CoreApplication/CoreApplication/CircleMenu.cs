@@ -38,12 +38,9 @@ namespace CoreApplication
             if (opt == "2")
             {
                 Console.Clear();
-                Console.WriteLine("Insert width");
+                Console.WriteLine("Insert radius");
                 string val = Console.ReadLine();
-                val += ",";
-                Console.WriteLine("Insert height");
-                val += Console.ReadLine();
-                string query = "INSERT into Rectangles (shape) values('" + val + "')";
+                string query = "INSERT into Circles (shape) values('" + val + "')";
                 SqlCommand sqlQuery = new SqlCommand(query, connect);
                 SqlDataReader addData = sqlQuery.ExecuteReader();
                 addData.Close();
