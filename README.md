@@ -3,31 +3,32 @@ User Defined Types .NET console application
 
 Types to be defined
 
-* Book
-  - author name
-  - title
-  - year of publication
+* Rectangle
+  - height
+  - width
+  - field
 
-* Student
-  - name
-  - field of study
-  - year 
+* Square
+  - size
+  - field
 
-* Movie
-  - title
-  - type
-  - release date
+* Circle
+  - radius
+  - circuit
+  - field
 
-* Car
-  - brand
-  - model
-  - horsepower
+* Diamond
+  - first diagonal
+  - second diagonal
+  - field
 
-* Fruit
-  - name
-  - color
-  - calories
+* Triangle
+  - length
+  - height
+  - field
 
-* Bank Account
-  - user ID
-  - balance
+* Trapezium
+  - upper base
+  - lower base
+  - height
+  - field
