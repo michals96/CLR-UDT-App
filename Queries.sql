@@ -1,5 +1,5 @@
 -- tutaj tworze baze w ktorej beda sie znajdywac moje UDT
-create database projectdb
+--create database projectdb
 
 -- zalaczam moja baze
 use projectdb
