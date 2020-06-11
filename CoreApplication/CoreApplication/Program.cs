@@ -26,6 +26,38 @@ namespace CoreApplication
                     case 1:
                         {
                             Console.WriteLine("RECTANGLE\n");
+                            Console.WriteLine("1 - List rectangle\n");
+                            Console.WriteLine("2 - Add rectangles\n");
+                            string opt = Console.ReadLine();
+                            if (opt == "1")
+                            {
+                                string query = "SELECT shape.Height as H, shape.Width as W, shape.Field as F from Rectangles";
+                                SqlCommand execute = new SqlCommand(query, connect);
+                                SqlDataReader getData = execute.ExecuteReader();
+                                while(getData.Read())
+                                {
+                                    Console.WriteLine("{0}\t{1}\t{2}",
+                                        getData["H"],
+                                        getData["W"],
+                                        getData["F"]);
+                                }
+                                Console.WriteLine("\n");
+                                getData.Close();
+                                Console.ReadKey();
+                            }
+                            if (opt == "2")
+                            {
+                                Console.WriteLine("Insert width\n");
+                                string val = Console.ReadLine();
+                                val += ",";
+                                Console.WriteLine("Insert height\n");
+                                val += Console.ReadLine();
+                                string query = "INSERT into Rectangles (shape) values('" + val + "')";
+                                SqlCommand sqlQuery = new SqlCommand(query, connect);
+                                SqlDataReader addData = sqlQuery.ExecuteReader();
+                                addData.Close();
+                                Console.WriteLine("\n");
+                            }
                             break;
                         }
                     case 2:
