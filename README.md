@@ -7,11 +7,11 @@ Types **already** implemented
   - width
   - field
 
-Types **to be** defined
 * Square
   - size
   - field
 
+Types **to be** defined
 * Circle
   - radius
   - circuit
