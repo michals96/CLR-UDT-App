@@ -18,17 +18,32 @@ namespace CoreApplication
             Console.Write("1. Rectangle\n");
             Console.Write("2. Exit\n");
             string option = Console.ReadLine();
-            switch (int.Parse(option))
+            try
             {
-                case 1:
-                    Console.WriteLine("RECTANGLE\n");
-                    break;
-                case 2:
-                    Console.WriteLine("EXIT\n");
-                    break;
-                default:
-                    break;
+                connect.Open();
+                switch (int.Parse(option))
+                {
+                    case 1:
+                        {
+                            Console.WriteLine("RECTANGLE\n");
+                            break;
+                        }
+                    case 2:
+                        Console.WriteLine("EXIT\n");
+                        break;
+                    default:
+                        break;
+                }
             }
+            catch (SqlException exception)
+            {
+                Console.WriteLine(exception.Message);
+            }
+            finally
+            {
+                connect.Close();
+            }
+
             Console.ReadKey(); 
         }
     }
