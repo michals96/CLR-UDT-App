@@ -9,9 +9,6 @@ namespace CoreApplication
 {
     class Program
     {
-        
-        
-
         // Main application - handles all events
         static void Main(string[] args)
         {
