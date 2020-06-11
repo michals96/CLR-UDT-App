@@ -1,0 +1,5 @@
+C:\Users\Administrator\Desktop\CLR-UDT-App\UDT\UDT\bin\Debug\SqlClassLibrary.dll
+C:\Users\Administrator\Desktop\CLR-UDT-App\UDT\UDT\bin\Debug\SqlClassLibrary.pdb
+C:\Users\Administrator\Desktop\CLR-UDT-App\UDT\UDT\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\CLR-UDT-App\UDT\UDT\obj\Debug\SqlClassLibrary.dll
+C:\Users\Administrator\Desktop\CLR-UDT-App\UDT\UDT\obj\Debug\SqlClassLibrary.pdb
