@@ -34,6 +34,7 @@ namespace CoreApplication
                                 string opt = Console.ReadLine();
                                 if (opt == "1")
                                 {
+                                    Console.Clear();
                                     Console.WriteLine("-- RECTANGLES LIST --");
                                     Console.WriteLine("Height\tWidth\tField");
                                     string query = "SELECT shape.Height as H, shape.Width as W, shape.Field as F from Rectangles";
@@ -87,10 +88,26 @@ namespace CoreApplication
                                     {
                                         query += " where shape.Width ";
                                     }
+                                    if (search_option == "2")
+                                    {
+                                        query += " where shape.Height ";
+                                    }
+                                    if (search_option == "3")
+                                    {
+                                        query += " where shape.Field ";
+                                    }
 
                                     if (order_option == "1")
                                     {
                                         query += "> " + val;
+                                    }
+                                    if (order_option == "2")
+                                    {
+                                        query += "< " + val;
+                                    }
+                                    if (order_option == "3")
+                                    {
+                                        query += "= " + val;
                                     }
                                     SqlCommand execute = new SqlCommand(query, connect);
                                     SqlDataReader getData = execute.ExecuteReader();
