@@ -3,7 +3,6 @@ using System.Data.SqlClient;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-//using RectMenu;
 
 namespace CoreApplication
 {
@@ -19,7 +18,8 @@ namespace CoreApplication
             {
                 Console.WriteLine(" -- MENU -- \n");
                 Console.Write("1. Rectangle\n");
-                Console.Write("2. Exit\n");
+                Console.Write("2. Square\n");
+                Console.Write("3. Exit\n");
                 string option = Console.ReadLine();
                 try
                 {
@@ -30,6 +30,9 @@ namespace CoreApplication
                             RectMenu.Rectangle_menu(connect);
                             break;
                         case 2:
+                            SquareMenu.Square_menu(connect);
+                            break;
+                        case 3:
                             Environment.Exit(0);
                             break;
                         default:
