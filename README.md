@@ -1,13 +1,13 @@
 # CLR-UDT-App
 User Defined Types .NET console application
 
-Types to be defined
-
+Types **already** implemented
 * Rectangle
   - height
   - width
   - field
 
+Types **to be** defined
 * Square
   - size
   - field
