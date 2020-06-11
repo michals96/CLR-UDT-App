@@ -8,7 +8,7 @@ namespace CoreApplication
 {
     class SquareMenu
     {
-        // Menu that handles Rectangle type interactions
+        // Menu that handles Square type interactions
         public static void Square_menu(SqlConnection connect)
         {
             Console.Clear();
