@@ -10,9 +10,9 @@ using System.Text;
     IsByteOrdered = true, ValidationMethodName = "ValidateCircle")]
 public struct Circle : INullable
 {
-    private Int32 radius;
-    private Int32 circuit;
-    private Int32 field;
+    private double radius;
+    private double circuit;
+    private double field;
     private bool m_Null;
 
     private bool ValidateCircle()
@@ -64,19 +64,19 @@ public struct Circle : INullable
         this.m_Null = true;
     }
 
-    public Int32 Radius
+    public double Radius
     {
         get { return this.radius; }
         set { radius = value; }
     }
 
-    public Int32 Circuit
+    public double Circuit
     {
         get { return this.circuit; }
         set { circuit = value; }
     }
 
-    public Int32 Field
+    public double Field
     {
         get { return this.field; }
         set { field = value; }
@@ -87,9 +87,9 @@ public struct Circle : INullable
     {
         Circle rv = new Circle();
         string tmp = s.Value;
-        rv.radius = Int32.Parse(tmp);
-        rv.circuit = 2 * Convert.ToInt32(3.14) * rv.radius;
-        rv.Field = Convert.ToInt32(3.14) * rv.radius * rv.radius;
+        rv.radius = double.Parse(tmp);
+        rv.circuit = 2 * 3.14 * rv.radius;
+        rv.Field = 3.14 * rv.radius * rv.radius;
 
         if (rv.ValidateCircle() == false)
             throw new ArgumentException("Invalid input values");

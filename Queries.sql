@@ -14,6 +14,6 @@ use projectdb
 
 -- CIRCLE --
 create table Circles (shape dbo.Circle)
-
+--drop table Circles
 
 
