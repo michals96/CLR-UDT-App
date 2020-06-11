@@ -16,10 +16,11 @@ namespace CoreApplication
             SqlConnection connect = new SqlConnection(sql);
             while(true)
             {
-                Console.WriteLine(" -- MENU -- \n");
+                Console.WriteLine(" -- MENU -- ");
                 Console.Write("1. Rectangle\n");
                 Console.Write("2. Square\n");
-                Console.Write("3. Exit\n");
+                Console.Write("3. Circle\n");
+                Console.Write("4. Exit\n");
                 string option = Console.ReadLine();
                 try
                 {
@@ -33,6 +34,9 @@ namespace CoreApplication
                             SquareMenu.Square_menu(connect);
                             break;
                         case 3:
+                            CircleMenu.Circle_menu(connect);
+                            break;
+                        case 4:
                             Environment.Exit(0);
                             break;
                         default:
