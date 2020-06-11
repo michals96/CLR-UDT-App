@@ -11,12 +11,12 @@ Types **already** implemented
   - size
   - field
 
-Types **to be** defined
 * Circle
   - radius
   - circuit
   - field
 
+Types **to be** defined
 * Diamond
   - first diagonal
   - second diagonal
