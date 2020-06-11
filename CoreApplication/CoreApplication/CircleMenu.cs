@@ -49,8 +49,8 @@ namespace CoreApplication
             if (opt == "3")
             {
                 Console.Clear();
-                Console.WriteLine("1 - Search by width");
-                Console.WriteLine("2 - Search by height");
+                Console.WriteLine("1 - Search by radius");
+                Console.WriteLine("2 - Search by circuit");
                 Console.WriteLine("3 - Search by field");
                 string search_option = Console.ReadLine();
                 Console.Clear();
@@ -62,17 +62,17 @@ namespace CoreApplication
                 Console.WriteLine("Enter Value");
                 string val = Console.ReadLine();
                 Console.Clear();
-                Console.WriteLine("-- RECTANGLES LIST --");
-                Console.WriteLine("Height\tWidth\tField");
-                string query = "SELECT shape.Height as H, shape.Width as W, shape.Field as F from Rectangles";
+                Console.WriteLine("-- CIRCLES LIST --");
+                Console.WriteLine("Radius\tCircuit\tField");
+                string query = "SELECT shape.Radius as R, shape.Circuit as C, shape.Field as F from Circles";
 
                 if (search_option == "1")
                 {
-                    query += " where shape.Width ";
+                    query += " where shape.Radius ";
                 }
                 if (search_option == "2")
                 {
-                    query += " where shape.Height ";
+                    query += " where shape.Circuit ";
                 }
                 if (search_option == "3")
                 {
@@ -96,8 +96,8 @@ namespace CoreApplication
                 while (getData.Read())
                 {
                     Console.WriteLine("{0}\t{1}\t{2}",
-                        getData["H"],
-                        getData["W"],
+                        getData["R"],
+                        getData["C"],
                         getData["F"]);
                 }
                 Console.WriteLine("\n");
