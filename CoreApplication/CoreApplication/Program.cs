@@ -27,11 +27,13 @@ namespace CoreApplication
                         case 1:
                             {
                                 Console.WriteLine("--RECTANGLE MENU--");
-                                Console.WriteLine("1 - List rectangle");
-                                Console.WriteLine("2 - Add rectangles");
+                                Console.WriteLine("1 - List rectangles");
+                                Console.WriteLine("2 - Add rectangle");
+                                Console.WriteLine("3 - Search rectangle");
                                 string opt = Console.ReadLine();
                                 if (opt == "1")
                                 {
+                                    Console.WriteLine("-- RECTANGLES LIST --");
                                     Console.WriteLine("Height\tWidth\tField");
                                     string query = "SELECT shape.Height as H, shape.Width as W, shape.Field as F from Rectangles";
                                     SqlCommand execute = new SqlCommand(query, connect);
@@ -57,14 +59,18 @@ namespace CoreApplication
                                     SqlCommand sqlQuery = new SqlCommand(query, connect);
                                     SqlDataReader addData = sqlQuery.ExecuteReader();
                                     addData.Close();
-                                    Console.WriteLine("\n");
+                                    Console.WriteLine("SUCCESFULLY ADDED!\n");
+                                }
+                                if (opt == "3")
+                                {
                                 }
                                 break;
                             }
                         case 2:
-                            Console.WriteLine("EXIT\n");
+                            Environment.Exit(0);
                             break;
                         default:
+                            Console.WriteLine("Wrong option! Choose again");
                             break;
                     }
                 }
@@ -77,7 +83,7 @@ namespace CoreApplication
                     connect.Close();
                 }
 
-                Console.ReadKey(); 
+                //Console.ReadKey(); 
             }
         }
     }
