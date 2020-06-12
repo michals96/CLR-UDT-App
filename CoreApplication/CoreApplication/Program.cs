@@ -3,6 +3,8 @@ using System.Data.SqlClient;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using ConsoleExtender;
+using System.Drawing;
 
 namespace CoreApplication
 {
@@ -11,6 +13,17 @@ namespace CoreApplication
         // Main application - handles all events
         static void Main(string[] args)
         {
+            // Przydatne, jesli chcemy wyprintowac dostepne czcionki
+            /*var fonts = ConsoleHelper.ConsoleFonts;
+            for (int f = 0; f < fonts.Length; f++)
+                Console.WriteLine("{0}: X={1}, Y={2}",
+                   fonts[f].Index, fonts[f].SizeX, fonts[f].SizeY);*/
+
+            // Jesli program sie nie buduje to prosze zakomentowac
+            // dwie linijki ponizej
+            ConsoleHelper.SetConsoleFont(9);
+            ConsoleHelper.SetConsoleIcon(SystemIcons.Information);
+
             string sql = @"DATA SOURCE=MSSQLServer;" + 
                 "INITIAL CATALOG=projectdb; INTEGRATED SECURITY=SSPI;";
             SqlConnection connect = new SqlConnection(sql);
