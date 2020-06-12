@@ -13,7 +13,7 @@ use projectdb
 --drop table Squares
 
 -- CIRCLE --
-create table Circles (shape dbo.Circle)
+--create table Circles (shape dbo.Circle)
 --drop table Circles
 
 
