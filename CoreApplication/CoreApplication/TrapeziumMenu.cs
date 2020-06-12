@@ -20,7 +20,7 @@ namespace CoreApplication
             if (opt == "1")
             {
                 Console.Clear();
-                Console.WriteLine("-- RECTANGLES LIST --");
+                Console.WriteLine("-- TRAPEZIUM LIST --");
                 Console.WriteLine("B1\tB2\tHeight\tField");
                 string query = "SELECT shape.Upper_base as B1, shape.Lower_base as B2, shape.Height as H, shape.Field as F from Trapeziums";
                 SqlCommand execute = new SqlCommand(query, connect);
@@ -42,15 +42,18 @@ namespace CoreApplication
                 Console.WriteLine("Insert upper base");
                 string val = Console.ReadLine();
                 val += ",";
+                Console.Clear();
                 Console.WriteLine("Insert lower base");
                 val += Console.ReadLine();
                 val += ",";
+                Console.Clear();
                 Console.WriteLine("Insert height");
                 val += Console.ReadLine();
                 string query = "INSERT into Trapeziums (shape) values('" + val + "')";
                 SqlCommand sqlQuery = new SqlCommand(query, connect);
                 SqlDataReader addData = sqlQuery.ExecuteReader();
                 addData.Close();
+                Console.Clear();
                 Console.WriteLine("SUCCESFULLY ADDED!\n");
             }
             if (opt == "3")
