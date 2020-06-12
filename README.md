@@ -21,12 +21,12 @@ Types **already** implemented
   - second diagonal
   - field
 
-Types **to be** defined
 * Triangle
   - length
   - height
   - field
 
+Types **to be** defined
 * Trapezium
   - upper base
   - lower base
