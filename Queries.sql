@@ -25,6 +25,6 @@ use projectdb
 --drop table Triangles
 
 -- TRAPEZIUM --
---create table Trapeziums (shape dbo.Trapezium)
-drop table Trapeziums
+create table Trapeziums (shape dbo.Trapezium)
+--drop table Trapeziums
 

@@ -22,7 +22,8 @@ namespace CoreApplication
                 Console.Write("3. Circle\n");
                 Console.Write("4. Diamond\n");
                 Console.Write("5. Triangle\n");
-                Console.Write("6. Exit\n");
+                Console.Write("6. Trapezium\n");
+                Console.Write("7. Exit\n");
                 string option = Console.ReadLine();
                 try
                 {
@@ -45,6 +46,9 @@ namespace CoreApplication
                             TriangleMenu.Triangle_menu(connect);
                             break;
                         case 6:
+                            TrapeziumMenu.Trapezium_menu(connect);
+                            break;
+                        case 7:
                             Environment.Exit(0);
                             break;
                         default:
