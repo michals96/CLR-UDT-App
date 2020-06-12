@@ -5,26 +5,21 @@
 use projectdb
 
 -- RECTANGLES --
---create table Rectangles (shape dbo.Rectangle);
-
+create table Rectangles (shape dbo.Rectangle);
 
 -- SQUARE --
---create table Squares (shape dbo.Square)
-
+create table Squares (shape dbo.Square)
 
 -- CIRCLE --
---create table Circles (shape dbo.Circle)
---drop table Circles
+create table Circles (shape dbo.Circle)
 
 -- DIAMOND --
---create table Diamonds (shape dbo.Diamond)
---drop table Diamonds
+create table Diamonds (shape dbo.Diamond)
 
 -- TRIANGLE --
- --create table Triangles (shape dbo.Triangle)
---drop table Triangles
+create table Triangles (shape dbo.Triangle)
 
 -- TRAPEZIUM --
 create table Trapeziums (shape dbo.Trapezium)
---drop table Trapeziums
+
 
