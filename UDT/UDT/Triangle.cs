@@ -89,7 +89,7 @@ public struct Triangle : INullable
         string[] tmp = s.Value.Split(",".ToCharArray());
         rv.length = double.Parse(tmp[0]);
         rv.height = double.Parse(tmp[1]);
-        rv.Field = rv.length * rv.height;
+        rv.Field = 0.5 * rv.length * rv.height;
 
         if (rv.ValidateTriangle() == false)
             throw new ArgumentException("Invalid input values");
