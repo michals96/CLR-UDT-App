@@ -14,6 +14,14 @@ namespace CoreApplication
             string sql = @"DATA SOURCE=MSSQLServer;" + 
                 "INITIAL CATALOG=projectdb; INTEGRATED SECURITY=SSPI;";
             SqlConnection connect = new SqlConnection(sql);
+            Console.BackgroundColor = ConsoleColor.Blue;
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine("...::: Techniki Internetowe 2 :::...");
+            Console.WriteLine("   :::    Michal Stefaniuk    :::");
+            Console.WriteLine("   :::      Projekt nr 6      :::");
+            Console.WriteLine("...:::    Aplikacja CLR UDT   :::...");
+            Console.ReadKey();
+            Console.Clear();
             while(true)
             {
                 Console.WriteLine(" -- MENU -- ");
@@ -52,6 +60,7 @@ namespace CoreApplication
                             Environment.Exit(0);
                             break;
                         default:
+                            Console.Clear();
                             Console.WriteLine("Wrong option! Choose again");
                             break;
                     }
