@@ -8,7 +8,7 @@ namespace CoreApplication
 {
     class TrapeziumMenu
     {
-        // Menu that handles Rectangle type interactions
+        // Menu that handles Trapezium type interactions
         public static void Trapezium_menu(SqlConnection connect)
         {
             Console.Clear();

@@ -8,7 +8,7 @@ namespace CoreApplication
 {
     class CircleMenu
     {
-        // Menu that handles Rectangle type interactions
+        // Menu that handles Circle type interactions
         public static void Circle_menu(SqlConnection connect)
         {
             Console.Clear();
@@ -44,6 +44,7 @@ namespace CoreApplication
                 SqlCommand sqlQuery = new SqlCommand(query, connect);
                 SqlDataReader addData = sqlQuery.ExecuteReader();
                 addData.Close();
+                Console.Clear();
                 Console.WriteLine("SUCCESFULLY ADDED!\n");
             }
             if (opt == "3")

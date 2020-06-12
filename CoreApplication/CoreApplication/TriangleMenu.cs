@@ -8,7 +8,7 @@ namespace CoreApplication
 {
     class TriangleMenu
     {
-        // Menu that handles Rectangle type interactions
+        // Menu that handles Triangle type interactions
         public static void Triangle_menu(SqlConnection connect)
         {
             Console.Clear();
@@ -41,12 +41,14 @@ namespace CoreApplication
                 Console.WriteLine("Insert length");
                 string val = Console.ReadLine();
                 val += ",";
+                Console.Clear();
                 Console.WriteLine("Insert height");
                 val += Console.ReadLine();
                 string query = "INSERT into Triangles (shape) values('" + val + "')";
                 SqlCommand sqlQuery = new SqlCommand(query, connect);
                 SqlDataReader addData = sqlQuery.ExecuteReader();
                 addData.Close();
+                Console.Clear();
                 Console.WriteLine("SUCCESFULLY ADDED!\n");
             }
             if (opt == "3")

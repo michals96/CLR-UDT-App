@@ -41,12 +41,14 @@ namespace CoreApplication
                 Console.WriteLine("Insert width");
                 string val = Console.ReadLine();
                 val += ",";
+                Console.Clear();
                 Console.WriteLine("Insert height");
                 val += Console.ReadLine();
                 string query = "INSERT into Rectangles (shape) values('" + val + "')";
                 SqlCommand sqlQuery = new SqlCommand(query, connect);
                 SqlDataReader addData = sqlQuery.ExecuteReader();
                 addData.Close();
+                Console.Clear();
                 Console.WriteLine("SUCCESFULLY ADDED!\n");
             }
             if (opt == "3")
