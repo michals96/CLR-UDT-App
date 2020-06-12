@@ -16,6 +16,7 @@ namespace CoreApplication
             Console.WriteLine("1 - List rectangles");
             Console.WriteLine("2 - Add rectangle");
             Console.WriteLine("3 - Search rectangle");
+            Console.WriteLine("Other - EXIT");
             string opt = Console.ReadLine();
             if (opt == "1")
             {
@@ -41,12 +42,14 @@ namespace CoreApplication
                 Console.WriteLine("Insert width");
                 string val = Console.ReadLine();
                 val += ",";
+                Console.Clear();
                 Console.WriteLine("Insert height");
                 val += Console.ReadLine();
                 string query = "INSERT into Rectangles (shape) values('" + val + "')";
                 SqlCommand sqlQuery = new SqlCommand(query, connect);
                 SqlDataReader addData = sqlQuery.ExecuteReader();
                 addData.Close();
+                Console.Clear();
                 Console.WriteLine("SUCCESFULLY ADDED!\n");
             }
             if (opt == "3")

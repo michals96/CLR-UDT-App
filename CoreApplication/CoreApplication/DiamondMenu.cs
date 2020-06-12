@@ -8,7 +8,7 @@ namespace CoreApplication
 {
     class DiamondMenu
     {
-        // Menu that handles Rectangle type interactions
+        // Menu that handles Diamond type interactions
         public static void Diamond_menu(SqlConnection connect)
         {
             Console.Clear();
@@ -16,6 +16,7 @@ namespace CoreApplication
             Console.WriteLine("1 - List diamonds");
             Console.WriteLine("2 - Add diamond");
             Console.WriteLine("3 - Search diamond");
+            Console.WriteLine("Other - EXIT");
             string opt = Console.ReadLine();
             if (opt == "1")
             {
@@ -41,12 +42,14 @@ namespace CoreApplication
                 Console.WriteLine("Insert 1st diagonal");
                 string val = Console.ReadLine();
                 val += ",";
+                Console.Clear();
                 Console.WriteLine("Insert 2nd diagonal");
                 val += Console.ReadLine();
                 string query = "INSERT into Diamonds (shape) values('" + val + "')";
                 SqlCommand sqlQuery = new SqlCommand(query, connect);
                 SqlDataReader addData = sqlQuery.ExecuteReader();
                 addData.Close();
+                Console.Clear();
                 Console.WriteLine("SUCCESFULLY ADDED!\n");
             }
             if (opt == "3")
