@@ -16,6 +16,7 @@ namespace CoreApplication
             Console.WriteLine("1 - List triangles");
             Console.WriteLine("2 - Add triangle");
             Console.WriteLine("3 - Search triangle");
+            Console.WriteLine("Other - EXIT");
             string opt = Console.ReadLine();
             if (opt == "1")
             {

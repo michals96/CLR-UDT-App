@@ -16,6 +16,7 @@ namespace CoreApplication
             Console.WriteLine("1 - List squares");
             Console.WriteLine("2 - Add square");
             Console.WriteLine("3 - Search square");
+            Console.WriteLine("Other - EXIT");
             string opt = Console.ReadLine();
             if (opt == "1")
             {

@@ -16,6 +16,7 @@ namespace CoreApplication
             Console.WriteLine("1 - List diamonds");
             Console.WriteLine("2 - Add diamond");
             Console.WriteLine("3 - Search diamond");
+            Console.WriteLine("Other - EXIT");
             string opt = Console.ReadLine();
             if (opt == "1")
             {

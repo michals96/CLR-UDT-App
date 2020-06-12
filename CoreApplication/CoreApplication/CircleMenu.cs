@@ -16,6 +16,7 @@ namespace CoreApplication
             Console.WriteLine("1 - List circles");
             Console.WriteLine("2 - Add circle");
             Console.WriteLine("3 - Search circle");
+            Console.WriteLine("Other - EXIT");
             string opt = Console.ReadLine();
             if (opt == "1")
             {

@@ -16,6 +16,7 @@ namespace CoreApplication
             Console.WriteLine("1 - List trapeziums");
             Console.WriteLine("2 - Add trapezium");
             Console.WriteLine("3 - Search trapezium");
+            Console.WriteLine("Other - EXIT");
             string opt = Console.ReadLine();
             if (opt == "1")
             {
