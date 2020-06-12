@@ -87,8 +87,8 @@ public struct Diamond : INullable
     {
         Diamond rv = new Diamond();
         string[] tmp = s.Value.Split(",".ToCharArray());
-        rv.first_diagonal = Int32.Parse(tmp[0]);
-        rv.second_diagonal = Int32.Parse(tmp[1]);
+        rv.first_diagonal = double.Parse(tmp[0]);
+        rv.second_diagonal = double.Parse(tmp[1]);
         rv.Field = 0.5 * rv.first_diagonal * rv.second_diagonal;
 
         if (rv.ValidateDiamond() == false)
