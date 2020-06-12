@@ -16,12 +16,12 @@ Types **already** implemented
   - circuit
   - field
 
-Types **to be** defined
 * Diamond
   - first diagonal
   - second diagonal
   - field
 
+Types **to be** defined
 * Triangle
   - length
   - height
