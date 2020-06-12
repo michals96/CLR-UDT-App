@@ -33,6 +33,8 @@ namespace CoreApplication
             Console.WriteLine("   :::    Michal Stefaniuk    :::");
             Console.WriteLine("   :::      Projekt nr 6      :::");
             Console.WriteLine("...:::    Aplikacja CLR UDT   :::...");
+            Console.WriteLine();
+            Console.WriteLine("Press any key to continue ...");
             Console.ReadKey();
             Console.Clear();
             while(true)
