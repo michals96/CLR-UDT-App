@@ -21,7 +21,10 @@ use projectdb
 --drop table Diamonds
 
 -- TRIANGLE --
- create table Triangles (shape dbo.Triangle)
+ --create table Triangles (shape dbo.Triangle)
 --drop table Triangles
 
+-- TRAPEZIUM --
+--create table Trapeziums (shape dbo.Trapezium)
+drop table Trapeziums
 
