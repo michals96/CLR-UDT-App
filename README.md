@@ -26,9 +26,10 @@ Types **already** implemented
   - height
   - field
 
-Types **to be** defined
 * Trapezium
   - upper base
   - lower base
   - height
   - field
+
+All types **defined**
