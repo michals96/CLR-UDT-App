@@ -20,7 +20,8 @@ namespace CoreApplication
                 Console.Write("1. Rectangle\n");
                 Console.Write("2. Square\n");
                 Console.Write("3. Circle\n");
-                Console.Write("4. Exit\n");
+                Console.Write("4. Diamond\n");
+                Console.Write("5. Exit\n");
                 string option = Console.ReadLine();
                 try
                 {
@@ -37,6 +38,9 @@ namespace CoreApplication
                             CircleMenu.Circle_menu(connect);
                             break;
                         case 4:
+                            DiamondMenu.Diamond_menu(connect);
+                            break;
+                        case 5:
                             Environment.Exit(0);
                             break;
                         default:

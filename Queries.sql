@@ -18,5 +18,6 @@ use projectdb
 
 -- DIAMOND --
 create table Diamonds (shape dbo.Diamond)
+--drop table Diamonds
 
 
