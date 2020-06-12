@@ -12,19 +12,19 @@ public struct Trapezium : INullable
 {
     private double upper_base;
     private double lower_base;
-    private double heigth;
+    private double height;
     private double field;
     private bool m_Null;
 
     private bool ValidateTrapezium()
     {
-        return (upper_base >= 0 && lower_base >= 0 && heigth >= 0);
+        return (upper_base >= 0 && lower_base >= 0 && height >= 0);
     }
 
     public override string ToString()
     {
         StringBuilder str = new StringBuilder();
-        str.Append(upper_base + " " + lower_base + " " + heigth + " :" + field);
+        str.Append(upper_base + " " + lower_base + " " + height + " :" + field);
         if (!this.IsNull)
             return str.ToString();
         else
@@ -53,7 +53,7 @@ public struct Trapezium : INullable
     {
         upper_base = _upper_base;
         lower_base = _lower_base;
-        heigth = _height;
+        height = _height;
         field = _field;
         m_Null = false;
     }
@@ -62,7 +62,7 @@ public struct Trapezium : INullable
     {
         this.upper_base = 0;
         this.lower_base = 0;
-        this.heigth = 0;
+        this.height = 0;
         this.field = 0;
         this.m_Null = true;
     }
@@ -81,8 +81,8 @@ public struct Trapezium : INullable
 
     public double Height
     {
-        get { return this.heigth; }
-        set { heigth = value; }
+        get { return this.height; }
+        set { height = value; }
     }
 
     public double Field
@@ -98,8 +98,8 @@ public struct Trapezium : INullable
         string[] tmp = s.Value.Split(",".ToCharArray());
         rv.upper_base = double.Parse(tmp[0]);
         rv.lower_base = double.Parse(tmp[1]);
-        rv.heigth = double.Parse(tmp[2]);
-        rv.Field = 0.5*(rv.upper_base + rv.lower_base)*rv.heigth;
+        rv.height = double.Parse(tmp[2]);
+        rv.Field = 0.5*(rv.upper_base + rv.lower_base)*rv.height;
 
         if (rv.ValidateTrapezium() == false)
             throw new ArgumentException("Invalid input values");
