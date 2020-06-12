@@ -16,4 +16,7 @@ use projectdb
 --create table Circles (shape dbo.Circle)
 --drop table Circles
 
+-- DIAMOND --
+create table Diamonds (shape dbo.Diamond)
+
 
